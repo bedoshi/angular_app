@@ -14,7 +14,10 @@ export class HelloComponent implements OnInit {
   styleClass:string
 
   constructor() {
-    setInterval(() => this.now = new Date(), 1000)
+    setInterval(() => {
+      this.now = new Date()
+      this.styleClass = this.styleClass == 'red' ? '' : 'red'
+    }, 1000)
   }
 
   ngOnInit(): void {
