@@ -4,4 +4,6 @@
     <p [class]="styleClass" >{{ message }}</p>
     <p>Result: {{ price * 1.08 }} yen</p>
     <p>Today: {{ today() }}</p>
+    <button (click) = "doCount()">Click</button>
+    <input type = "text" #field1 (keyup) = "doType(field1.value)"/>
 </div>

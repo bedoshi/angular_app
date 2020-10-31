@@ -3,16 +3,7 @@ import { Data } from '@angular/router';
 
 @Component({
   selector: 'app-hello',
-  // templateUrl: './hello.component.html',
-  template: `
-    <div id = "body">
-        <h1>{{ title }}</h1>
-        <p>{{ message }}</p>
-        <p [class]="styleClass" >{{ message }}</p>
-        <p>Result: {{ price * 1.08 }} yen</p>
-        <p>Today: {{ today() }}</p>
-    </div>
-  `,
+  templateUrl: './hello.component.html',
   styleUrls: ['./hello.component.css']
 })
 export class HelloComponent implements OnInit {
@@ -21,6 +12,8 @@ export class HelloComponent implements OnInit {
   price:number
   now:Date
   styleClass:string
+  count: number
+  input: string
 
   constructor() {
     setInterval(() => {
@@ -34,9 +27,20 @@ export class HelloComponent implements OnInit {
     this.message = 'This is my first component'
     this.price = 123450
     this.styleClass = 'red'
+    this.count = 0
+    this.input = ''
   }
 
   today() {
-    return this.now.toLocaleString()
+    return this.now
+  }
+
+  doCount() {
+    return this.message = ++this.count + "回クリックしました"
+  }
+
+  doType(val:string) {
+    this.input = val
+    this.message = 'you type: ' + this.input
   }
 }
