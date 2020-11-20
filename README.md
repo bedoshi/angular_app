@@ -1,5 +1,10 @@
 # AngularApp
 
+This is a reporitory for my learning Angular v9.
+so this repository doesn't help anyone without me.
+
+---
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.
 
 ## Development server
